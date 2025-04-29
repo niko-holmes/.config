@@ -11,5 +11,4 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 --vim.opt.termguicolors = true
 
-vim.cmd([[match Error /\s\+$/]])        -- highlight trailing whitespaces
-vim.cmd([[match Error /\%>120c/]])      -- highlight lines > 120 chars
+vim.opt.colorcolumn = "120"
