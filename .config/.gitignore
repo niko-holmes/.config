@@ -1,11 +1,14 @@
 !starship
-!starship/*
+!starship/**
 
 !neofetch
-!neofetch/*
+!neofetch/**
 
 !btop
-!btop/*
+!btop/**
 
 !git
-!git/*
+!git/**
+
+!nvim
+!nvim/**
