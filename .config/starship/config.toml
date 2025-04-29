@@ -1,0 +1,93 @@
+format = '''
+\[$sudo\\
+$username\\
+$hostname\\
+$directory\\
+$git_branch\\
+$git_state\\
+$git_status\\
+$python\\
+$c\\
+$conda\\
+\] \\
+$cmd_duration\\
+$line_break\\
+$character'''
+
+continuation_prompt = '  '
+
+palette = 'jammy'
+
+[palettes.jammy]
+red = '#8b1331'
+orange = '#be5018'
+yellow = '#ac7a1a' 
+green = '#537d4b'
+cyan = '#46878a'
+blue = '#472c9f'
+purple = '#511248'
+magenta = '#a7459d'
+
+[sudo]
+format = "[$symbol]($style) "
+symbol = "su"
+style = "bold red"
+disabled = false
+
+[username]
+format = "[$user]($style)"
+style_user = "bold magenta"
+show_always = true
+
+[hostname]
+format = "[@$hostname$ssh_symbol]($style)"
+style = "magenta"
+ssh_symbol = '🌐'
+
+[directory]
+format = "|[$path]($style)"
+style = "bold cyan"
+truncation_length = 3
+
+[character]
+success_symbol = "[>](magenta)"
+error_symbol = "[>](red)"
+vimcmd_symbol = "[<](bold green)"
+
+[git_branch]
+format = "|[$branch]($style)"
+style = "yellow"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "green"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\)'
+style = "yellow"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "orange"
+
+[conda]
+format = "|[$symbol $environment]($style)"
+symbol = "conda"
+style = "orange"
+
+[python]
+format = "|[$symbol $version]($style) [$virtualenv](orange)"
+symbol = "py"
+style = "bold green"
+
+[c] # With C++
+format = "|[$name $version]($style)"
+style = "bold green"
+detect_extensions = ['c', 'cpp', 'h', 'hpp']

@@ -1,0 +1,49 @@
+[user]
+	name = niko-holmes
+	email = holmesnikolaus@gmail.com
+
+[core]
+	compression = 9
+	whitespace = error
+	preloadindex = true
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
+
+[init]
+	defaultBranch = main
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
+
+[diff]
+	context = 3
+	renames = copies
+	interHunkContext = 10
+
+[push]
+	autoSetupRemote = true
+	default = current
+
+[pull]
+	default = current
+
+[url "git@github.com:"]
+	insteadOf = "gh:"
+
+[url "git@github.com:shadow_robot/"]
+	insteadOf = "sr:"
+
+[url "git@github.com:niko-holmes/"]
+	insteadOf = "nh:"
