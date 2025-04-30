@@ -13,6 +13,7 @@ autocmd('InsertLeave', {
     end,
 })
 
+-- Remove trailing whitespaces on buffer save
 autocmd('BufWritePre', {
     pattern = "*",
     command = [[%s/\s\+$//e]],
