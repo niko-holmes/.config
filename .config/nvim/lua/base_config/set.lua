@@ -12,3 +12,5 @@ vim.opt.wrap = false
 --vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = "120"
+
+vim.diagnostic.open_float()

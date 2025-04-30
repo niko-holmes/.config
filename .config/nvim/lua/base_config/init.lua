@@ -1,3 +1,19 @@
 require("base_config.remap")
 require("base_config.set")
 require("base_config.lazy_init")
+
+vim.diagnostic.config({ virtual_text = true })
+
+local autocmd = vim.api.nvim_create_autocmd
+
+-- Lint when leaving insert mode
+autocmd('InsertLeave', {
+    callback = function()
+        require("lint").try_lint()
+    end,
+})
+
+autocmd('BufWritePre', {
+    pattern = "*",
+    command = [[%s/\s\+$//e]],
+})
