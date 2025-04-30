@@ -1,49 +1,50 @@
 [user]
-	name = niko-holmes
-	email = holmesnikolaus@gmail.com
+    name = niko-holmes
+    email = holmesnikolaus@gmail.com
 
 [core]
-	compression = 9
-	whitespace = error
-	preloadindex = true
+    compression = 9
+    whitespace = error
+    preloadindex = true
+    editor = "nvim"
 
 [commit]
-	gpgsign = true
+    gpgsign = true
 
 [tag]
-	gpgsign = true
+    gpgsign = true
 
 [gpg]
-	format = ssh
+    format = ssh
 
 [gpg "ssh"]
-	defaultKeyCommand = ssh-add -L
+    defaultKeyCommand = ssh-add -L
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [status]
-	branch = true
-	showStash = true
-	showUntrackedFiles = all
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
 
 [diff]
-	context = 3
-	renames = copies
-	interHunkContext = 10
+    context = 3
+    renames = copies
+    interHunkContext = 10
 
 [push]
-	autoSetupRemote = true
-	default = current
+    autoSetupRemote = true
+    default = current
 
 [pull]
-	default = current
+    default = current
 
 [url "git@github.com:"]
-	insteadOf = "gh:"
+    insteadOf = "gh:"
 
 [url "git@github.com:shadow_robot/"]
-	insteadOf = "sr:"
+    insteadOf = "sr:"
 
 [url "git@github.com:niko-holmes/"]
-	insteadOf = "nh:"
+    insteadOf = "nh:"
