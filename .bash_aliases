@@ -1,18 +1,18 @@
 # General QoL Aliases
 alias btw='neofetch'
-alias hgrep='history | grep'
+alias hrg='history | rg'
 alias refresh='clear && source $HOME/.bashrc'
 alias v='nvim'
 
 # Git Aliases
-alias gstat='git status'
-alias gadd='git add'
-alias gpush='git push'
-alias gpull='git pull'
-alias gcomm='git commit'
-alias gcout='git checkout'
-alias gdiff='git diff'
-alias glog='git log'
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gu='git pull'
+alias gc='git commit'
+alias go='git checkout'
+alias gd='git diff'
+alias gl='git log'
 
 # Docker Aliases
 alias dkr_stopall='docker stop $(docker ps -q) &> /dev/null || echo "No running containers"'
