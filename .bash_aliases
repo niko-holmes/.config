@@ -5,6 +5,7 @@ alias refresh='clear && source $HOME/.bashrc'
 alias v='nvim'
 
 # Git Aliases
+alias g="git"
 alias gs='git status'
 alias ga='git add'
 alias gp='git push'

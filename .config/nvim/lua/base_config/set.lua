@@ -9,8 +9,17 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
---vim.opt.termguicolors = true
-
+vim.opt.termguicolors = true
 vim.opt.colorcolumn = "120"
 
-vim.diagnostic.open_float()
+vim.opt.updatetime = 1000
+
+vim.diagnostic.config({ virtual_text = true })
+
+-- Set Background to None. This copies the current terminal background and allows transparency
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
