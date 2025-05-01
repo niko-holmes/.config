@@ -4,6 +4,7 @@ return {
         -- Configuration goes here.
         local g = vim.g
 
+        g.ale_virtualtext_cursor = 'disabled'
         g.ale_warn_about_trailing_whitespace = 0
 
         g.ale_linters = {
