@@ -12,3 +12,6 @@
 
 !nvim
 !nvim/**
+
+!linters
+!linters/**
