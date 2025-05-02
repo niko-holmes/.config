@@ -15,5 +15,8 @@ alias go='git checkout'
 alias gd='git diff'
 alias gl='git log'
 
+# Python Aliases
+alias py='python3'
+
 # Docker Aliases
 alias dkr_stopall='docker stop $(docker ps -q) &> /dev/null || echo "No running containers"'
