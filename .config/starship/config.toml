@@ -60,7 +60,8 @@ style = "bold yellow"
 symbol = '󰘬'
 
 [git_status]
-format = "[[($up_to_date$modified$conflicted$untracked$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)"
+format = """
+[[($up_to_date$modified$conflicted$untracked$renamed$deleted)](magenta)($staged$ahead_behind$stashed)]($style)"""
 style = "green"
 modified = '*'
 stashed = '≡'
