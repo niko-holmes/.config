@@ -4,6 +4,7 @@ $username\\
 $hostname\\
 $directory\\
 $git_branch\\
+$git_commit\\
 $git_state\\
 $git_status\\
 $python\\
@@ -19,7 +20,7 @@ continuation_prompt = '  '
 palette = 'jammy'
 
 [palettes.jammy]
-red = '#8b1331'
+red = '#a51639'
 orange = '#be5018'
 yellow = '#ac7a1a'
 green = '#537d4b'
@@ -59,9 +60,16 @@ format = "|[$symbol $branch]($style)"
 style = "bold yellow"
 symbol = '󰘬'
 
+[git_commit]
+format = '[\([$tag]($style)\)](bold yellow)'
+style = "magenta"
+tag_symbol = ''
+only_detached = true
+tag_disabled = false
+
 [git_status]
 format = """
-[[($up_to_date$modified$conflicted$untracked$renamed$deleted)](magenta)($staged$ahead_behind$stashed)]($style)"""
+[[($up_to_date$modified$conflicted$untracked$renamed$deleted)](red)($staged$ahead_behind$stashed)]($style)"""
 style = "green"
 modified = '*'
 stashed = '≡'
