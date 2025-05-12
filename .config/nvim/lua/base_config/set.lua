@@ -10,7 +10,6 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 vim.opt.termguicolors = true
-vim.opt.colorcolumn = "120"
 
 vim.opt.updatetime = 1000
 
