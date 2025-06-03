@@ -15,3 +15,6 @@
 
 !linters
 !linters/**
+
+!bash
+!bash/**
