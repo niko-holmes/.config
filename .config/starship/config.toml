@@ -43,6 +43,7 @@ show_always = true
 [hostname]
 format = "[@$hostname$ssh_symbol]($style)"
 style = "magenta"
+ssh_only = false
 ssh_symbol = ''
 
 [directory]
