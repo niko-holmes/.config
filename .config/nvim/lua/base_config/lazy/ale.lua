@@ -1,4 +1,5 @@
-return {
+return
+{
     'dense-analysis/ale',
     config = function()
         -- Configuration goes here.
