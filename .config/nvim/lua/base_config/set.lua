@@ -10,6 +10,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 vim.opt.termguicolors = true
+vim.opt.foldenable = false
 
 vim.opt.updatetime = 1000
 
