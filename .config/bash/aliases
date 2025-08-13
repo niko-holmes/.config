@@ -3,12 +3,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
 # General QoL Aliases
 alias btw='neofetch'
 alias hrg='history | rg'
 alias refresh='clear && source $HOME/.bashrc'
-alias v='nvim'
 
 # Git Aliases
 alias g="git"
@@ -23,3 +21,7 @@ alias gl='git log'
 
 # Python Aliases
 alias py='python3'
+
+# NVim Aliases
+alias v='nvim'
+alias vn='nvim +Note'  # Open the current daily note (dep: note.vim plugin)
