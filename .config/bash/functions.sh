@@ -10,7 +10,7 @@ function git_clean_local_branches() {
     branches_to_delete="$(git branch --verbose --verbose | grep ': gone]' | awk '{print $1}')"
 
     if [ -z "$branches_to_delete" ]; then
-        printf 'Found no branches with pruned remotes\n'
+        printf 'Found no local branches with pruned remotes\n'
     else
         git branch --delete --force "$branches_to_delete"
     fi
