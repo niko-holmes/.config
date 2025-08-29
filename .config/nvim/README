@@ -1,0 +1,12 @@
+--------------
+ Dependencies
+--------------
+
+peek:
+    - Deno
+
+ale:
+    - flake8
+    - pylint
+    - mypy
+    - cpplint
