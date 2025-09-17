@@ -12,6 +12,6 @@ function git_clean_local_branches() {
     if [ -z "$branches_to_delete" ]; then
         printf 'Found no local branches with pruned remotes\n'
     else
-        git branch --delete --force "$branches_to_delete"
+        echo "$branches_to_delete" | xargs git branch --delete --force
     fi
 }
