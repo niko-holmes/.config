@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # ls Aliases
-alias ll='ls --all -l --classify'
-alias la='ls --almost-all'
 alias l='ls --color --classify'
+alias ll='l --all -l'
+alias la='l --almost-all'
 
 # General QoL Aliases
 alias btw='neofetch'
