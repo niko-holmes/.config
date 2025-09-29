@@ -1,6 +1,7 @@
 vim.opt.nu = true                       -- enable line numbers
 vim.opt.relativenumber = false	        -- dont use relative line numbers
 vim.opt.updatetime = 1000
+vim.opt.textwidth = 120
 
 -- set tab size to 4 spaces
 vim.opt.tabstop = 4
