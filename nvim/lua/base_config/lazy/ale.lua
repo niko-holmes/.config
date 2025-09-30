@@ -1,6 +1,7 @@
 return
 {
     'dense-analysis/ale',
+    tag = 'v4.0.0',
     config = function()
         -- Configuration goes here.
         local g = vim.g

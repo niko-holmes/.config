@@ -1,7 +1,7 @@
 return
 {
     'brenoprata10/nvim-highlight-colors',
-
+    branch = 'main',
     config = function()
         local colors = require('nvim-highlight-colors')
 

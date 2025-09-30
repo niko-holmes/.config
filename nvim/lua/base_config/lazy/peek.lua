@@ -1,10 +1,11 @@
 return
 {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
+    'toppair/peek.nvim',
+    branch = 'master',
+    event = { 'VeryLazy' },
+    build = 'deno task --quiet build:fast',
     config = function()
-        require("peek").setup({
+        require('peek').setup({
             auto_load = true,           -- whether to automatically load preview when entering another markdown buffer
             close_on_bdelete = true,    -- close preview window on buffer delete
             syntax = true,              -- enable syntax highlighting, affects performance
@@ -19,7 +20,7 @@ return
             throttle_time = 'auto',     -- minimum amount of time in milliseconds that has to pass before starting
                                         -- new render
         })
-        vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-        vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+        vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
     end,
 }

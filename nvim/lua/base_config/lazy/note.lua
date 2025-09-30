@@ -1,6 +1,7 @@
 return
 {
     'gsuuon/note.nvim',
+    branch = 'main',
     opts = {
         -- opts.spaces are note workspace parent directories.
         -- These directories contain a `notes` directory which will be created if missing.
