@@ -1,6 +1,7 @@
 return
 {
     'Th3Whit3Wolf/space-nvim',
+    branch = 'main',
     config = function()
         -- Configuration goes here.
         local g = vim.g
