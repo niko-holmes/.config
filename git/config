@@ -39,7 +39,7 @@
 
 [pull]
     default = current
-    rebase = false
+    rebase = true
 
 [url "git@github.com:"]
     insteadOf = "gh:"
