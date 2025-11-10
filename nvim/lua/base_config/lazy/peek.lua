@@ -1,6 +1,6 @@
 return
 {
-    'toppair/peek.nvim',
+    'niko-holmes/peek.nvim',
     branch = 'master',
     event = { 'VeryLazy' },
     build = 'deno task --quiet build:fast',
