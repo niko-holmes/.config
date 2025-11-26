@@ -16,30 +16,57 @@ require("lazy").setup({
     change_detection = { notify = false }
 })
 
-local function install_mason_package(pkg_name)
-    local mason_registry = require("mason-registry")
-    local pkg = mason_registry.get_package(pkg_name)
-    if not pkg:is_installed() then
-        print(string.format("Installing %s", pkg_name))
-        pkg:install()
-    end
-end
 
--- Install ALE requirements
-for _, linters in pairs(vim.g.ale_linters) do
-    for _, linter_name in pairs(linters) do
-        install_mason_package(linter_name)
-    end
-end
+-----------------------------------
+--- Auto Install Mason Packages ---
+-----------------------------------
 
--- Install LSPs
 local required_lsps = {
     python = {'python-lsp-server'},
     cpp = {'clangd'},
     lua = {'lua-language-server'}
 }
+local mason_pkgs_to_install = {}
+local mason_registry = require("mason-registry")
+
+local function is_mason_package_installed(pkg_name, registry)
+    local pkg
+
+    if registry.has_package(pkg_name) then
+        pkg = registry.get_package(pkg_name)
+    end
+
+    if pkg:is_installed() then
+        return true
+    else
+        return false
+    end
+end
+
+-- Get ALE packages to install
+for _, linters in pairs(vim.g.ale_linters) do
+    for _, linter_name in pairs(linters) do
+        if not is_mason_package_installed(linter_name, mason_registry) then
+            table.insert(mason_pkgs_to_install, linter_name)
+        end
+    end
+end
+
+-- Get LSPs to install
 for _, lang_reqs in pairs(required_lsps) do
     for _, lsp in pairs(lang_reqs) do
-        install_mason_package(lsp)
+        if not is_mason_package_installed(lsp, mason_registry) then
+            table.insert(mason_pkgs_to_install, lsp)
+        end
     end
+end
+
+local next = next
+if next(mason_pkgs_to_install) ~= nil then
+    for _, pkg_name in ipairs(mason_pkgs_to_install) do
+        local pkg = mason_registry.get_package(pkg_name)
+        pkg:install()
+    end
+
+    require("mason.ui").open()
 end
