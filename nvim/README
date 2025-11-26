@@ -5,8 +5,5 @@
 peek:
     - Deno
 
-ale:
-    - flake8
-    - pylint
-    - mypy
-    - cpplint
+ALE:
+   All linters run by ALE are auto-installed by mason when launching nvim
