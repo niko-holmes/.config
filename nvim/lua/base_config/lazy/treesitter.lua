@@ -32,5 +32,8 @@ return
             highlight = { enable = true },
             indent = { enable = true },
         })
+
+        -- Define highlighting for exta filetypes
+        vim.treesitter.language.register('xml', 'launch')
     end
 }
