@@ -33,7 +33,14 @@ return
             indent = { enable = true },
         })
 
-        -- Define highlighting for exta filetypes
+        --Define highlighting for exta filetypes
+        vim.filetype.add {
+            extension = {
+                urdf = 'urdf',
+                launch = 'launch'
+            }
+        }
+        vim.treesitter.language.register('xml', 'urdf')
         vim.treesitter.language.register('xml', 'launch')
     end
 }
