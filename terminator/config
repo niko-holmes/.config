@@ -6,7 +6,7 @@
 [profiles]
   [[default]]
     background_color = "#241f31"
-    background_darkness = 0.75
+    background_darkness = 0.6
     background_type = transparent
     cursor_color = "#aaaaaa"
     foreground_color = "#f6f5f4"
