@@ -24,6 +24,7 @@ require("lazy").setup({
 local required_lsps = {
     python = {'python-lsp-server'},
     cpp = {'clangd'},
+    c = {'clangd'},
     lua = {'lua-language-server'}
 }
 local mason_pkgs_to_install = {}
@@ -36,11 +37,7 @@ local function is_mason_package_installed(pkg_name, registry)
         pkg = registry.get_package(pkg_name)
     end
 
-    if pkg:is_installed() then
-        return true
-    else
-        return false
-    end
+    return pkg:is_installed()
 end
 
 -- Get ALE packages to install
