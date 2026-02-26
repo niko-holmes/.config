@@ -16,6 +16,7 @@ alias gs='git status'
 alias ga='git add'
 alias gp='git push'
 alias gu='git pull'
+alias gua="git_pull_all_repos_in_dir"
 alias gc='git commit'
 alias go='git checkout'
 alias gd='git diff'

@@ -17,6 +17,22 @@ function git_clean_local_branches() {
 }
 
 
+# DESC: Search the current working directory for any git repositories. Perform a `git pull` on each found repository.
+# ARGS: None
+# OUTS: None
+# RETS: None
+function git_update_all_repos_in_dir() {
+    local working_dir=$(pwd)
+    local repos_to_update=$(find "$working_dir" -name '.git' | cut -d '/' -f 2)
+    for git_repo in "$repos_to_update"; do
+        printf "Pulling changes for $git_repo..."
+        cd "$working_dir/$git_repo"
+        git pull
+    done
+    cd $working_dir
+}
+
+
 # DESC: Update NVIDIA drivers. Purge existing drivers and auto install new drivers. Based off
 #       https://askubuntu.com/questions/206283/how-can-i-uninstall-a-nvidia-driver-completely/206289#206289 and
 #       https://askubuntu.com/questions/1391245/getting-the-latest-nvidia-graphics-driver-through-software-updates
