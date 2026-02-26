@@ -21,7 +21,7 @@ function git_clean_local_branches() {
 # ARGS: None
 # OUTS: None
 # RETS: None
-function git_update_all_repos_in_dir() {
+function git_pull_all_repos_in_dir() {
     local working_dir=$(pwd)
     local repos_to_update=$(find "$working_dir" -name '.git' | cut -d '/' -f 2)
     for git_repo in "$repos_to_update"; do
