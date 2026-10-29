@@ -19,6 +19,7 @@
 
 !nvim
 !nvim/**
+nvim/lazy-lock.json
 
 !linters
 !linters/**
