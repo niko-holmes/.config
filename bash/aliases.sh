@@ -6,7 +6,6 @@ alias ll='l --all -l'
 alias la='l --almost-all'
 
 # General QoL Aliases
-alias btw='neofetch'
 alias hrg='history | rg'
 alias refresh='clear && source $HOME/.bashrc'
 
@@ -29,3 +28,6 @@ alias py='python3'
 # NVim Aliases
 alias v='nvim'
 alias vn='nvim +Note'  # Open the current daily note (DEP: note.vim plugin)
+
+# Nix Aliases
+alias nix-conf='sudo nvim /etc/nixos/configuration.nix'
